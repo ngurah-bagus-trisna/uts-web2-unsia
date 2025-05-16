@@ -13,3 +13,17 @@ CREATE TABLE IF NOT EXISTS `tb_inventory` (
   PRIMARY KEY (`id_barang`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+DELIMITER $$
+
+CREATE PROCEDURE update_status_barang()
+BEGIN
+  UPDATE tb_inventory
+  SET status_barang = 
+    CASE 
+      WHEN jumlah_barang = 0 THEN 0
+      ELSE 1
+    END;
+END$$
+
+DELIMITER ;
+
