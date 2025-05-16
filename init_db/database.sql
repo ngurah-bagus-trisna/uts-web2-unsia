@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS `tb_inventory` (
   `jumlah_barang` INT NOT NULL,
   `satuan_barang` VARCHAR(20) NOT NULL,
   `harga_beli` DOUBLE(20,2) NOT NULL,
+  `status_barang` BOOLEAN NOT NULL,
   PRIMARY KEY (`id_barang`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
