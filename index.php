@@ -1,4 +1,13 @@
+<!-- IDENTITAS 
+
+Nama  : I Gusti Ngurah Bagus Trisna Andika
+Kelas : IF401
+NIM   : 230401010136
+
+-->
+
 <?php
+
 session_start();
 
 $env = parse_ini_file('.env');
